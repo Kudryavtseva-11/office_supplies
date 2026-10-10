@@ -1,0 +1,156 @@
+[
+  {
+    "model": "shop.category",
+    "pk": 1,
+    "fields": {
+      "name": "Ручки",
+      "slug": "pens"
+    }
+  },
+  {
+    "model": "shop.category",
+    "pk": 2,
+    "fields": {
+      "name": "Блокноты и бумага",
+      "slug": "notebooks"
+    }
+  },
+  {
+    "model": "shop.category",
+    "pk": 3,
+    "fields": {
+      "name": "Офисные принадлежности",
+      "slug": "office"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 1,
+    "fields": {
+      "name": "Ручка синяя",
+      "category": 1,
+      "price": "45.00",
+      "stock": 150,
+      "description": "Шариковая ручка синяя. Пишет мягко, не размазывается.",
+      "image_url": "/media/products/pen_blue.png",
+      "created_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 2,
+    "fields": {
+      "name": "Ручка черная",
+      "category": 1,
+      "price": "89.00",
+      "stock": 120,
+      "description": "Гелевая ручка черная. Тонкая линия письма, быстро сохнет.",
+      "image_url": "/media/products/pen_black.png",
+      "created_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 3,
+    "fields": {
+      "name": "Блокнот А5",
+      "category": 2,
+      "price": "199.00",
+      "stock": 80,
+      "description": "Блокнот на пружине. 80 листов в клетку.",
+      "image_url": "/media/products/notebook_a5.png",
+      "created_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 4,
+    "fields": {
+      "name": "Ежедневник",
+      "category": 2,
+      "price": "450.00",
+      "stock": 35,
+      "description": "Недатированный ежедневник. 192 страницы.",
+      "image_url": "/media/products/diary.png",
+      "created_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 5,
+    "fields": {
+      "name": "Стикеры",
+      "category": 2,
+      "price": "120.00",
+      "stock": 200,
+      "description": "Самоклеящиеся стикеры. 100 листов, яркие цвета.",
+      "image_url": "/media/products/stickers.png",
+      "created_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 6,
+    "fields": {
+      "name": "Бумага А4",
+      "category": 2,
+      "price": "349.00",
+      "stock": 60,
+      "description": "Офисная бумага 500 листов. Плотность 80 г/м².",
+      "image_url": "/media/products/paper_a4.png",
+      "created_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 7,
+    "fields": {
+      "name": "Линейка 30 см",
+      "category": 3,
+      "price": "65.00",
+      "stock": 100,
+      "description": "Прозрачная пластиковая линейка. Длина 30 см.",
+      "image_url": "/media/products/ruler.png",
+      "created_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 8,
+    "fields": {
+      "name": "Папка-регистратор",
+      "category": 3,
+      "price": "189.00",
+      "stock": 95,
+      "description": "Папка для документов с механизмом скоросшивателя.",
+      "image_url": "/media/products/folder.png",
+      "created_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 9,
+    "fields": {
+      "name": "Степлер",
+      "category": 3,
+      "price": "279.00",
+      "stock": 42,
+      "description": "Канцелярский степлер со скобами в комплекте.",
+      "image_url": "/media/products/stapler.png",
+      "created_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 10,
+    "fields": {
+      "name": "Клей-карандаш",
+      "category": 3,
+      "price": "55.00",
+      "stock": 250,
+      "description": "Клей-карандаш 21 г. Быстро сохнет, не пачкает руки.",
+      "image_url": "/media/products/glue.png",
+      "created_at": "2024-01-01T00:00:00Z"
+    }
+  }
+]

@@ -1,0 +1,13 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}Заказ оформлен{% endblock %}
+
+{% block content %}
+    <div style="background: white; border-radius: 10px; padding: 40px; text-align: center;">
+        <div style="font-size: 64px;">✅</div>
+        <h2 style="color: #48bb78; margin: 20px 0;">Заказ успешно оформлен!</h2>
+        <p style="font-size: 18px; margin: 20px 0;">Номер вашего заказа: <strong>#{{ order_id }}</strong></p>
+        <p>В ближайшее время с вами свяжется менеджер для подтверждения заказа.</p>
+        <button onclick="window.location.href='/'" class="btn" style="margin-top: 30px; width: auto; padding: 12px 30px;">Вернуться на главную</button>
+    </div>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}Главная - Канцелярский магазин{% endblock %}
+
+{% block content %}
+    <h1 style="color: white; margin-bottom: 20px;">Наши товары</h1>
+    <div class="products-grid" id="products-grid">
+        <div style="text-align: center; color: white;">Загрузка товаров...</div>
+    </div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    async function loadProducts() {
+        try {
+            const response = await fetch('/api/products/');
+            const products = await response.json();
+            
+            const grid = document.getElementById('products-grid');
+            grid.innerHTML = '';
+            
+            products.forEach(product => {
+                // Используем image_url из базы данных
+                const imageUrl = product.image_url || 'https://via.placeholder.com/200x200?text=No+Image';
+                
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.innerHTML = `
+                    <div style="text-align: center; margin-bottom: 15px;">
+                        <img src="${imageUrl}" alt="${product.name}" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 5px;">
+                    </div>
+                    <div class="product-title">${product.name}</div>
+                    <div class="product-price">${product.price} ₽</div>
+                    <div class="product-stock">В наличии: ${product.stock} шт.</div>
+                    <div class="product-description" style="color: #666; margin-bottom: 15px; font-size: 14px;">${product.description.substring(0, 100)}</div>
+                    <button class="btn" onclick="addToCart({id: ${product.id}, name: '${product.name}', price: ${product.price}})"> 
+                        Добавить в корзину
+                    </button>
+                `;
+                grid.appendChild(card);
+            });
+        } catch (error) {
+            console.error('Ошибка загрузки товаров:', error);
+            document.getElementById('products-grid').innerHTML = '<div style="text-align: center; color: white;">Ошибка загрузки товаров</div>';
+        }
+    }
+    
+    loadProducts();
+</script>
+{% endblock %}
